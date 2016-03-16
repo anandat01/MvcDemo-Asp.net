@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MvcDemo</title>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="page-header">Mvc CRUD Operation</h1>
+        </div>        
+        <div class="row">
+             <div class="col-lg-6">
+                 <frameset>
+                     <legend>Add New Data</legend>
+                     <form method="post" action="@Url.Action("insertdata","First")">
+                         Name:&nbsp;&nbsp;&nbsp; <input type="text" name="name" value="" placeholder="Enter Name"><br /><br />
+                         Address: <input type="text" name="address" value="" placeholder="Enter address"><br /><br />
+                         <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="submit" value="Add" />
+                     </form>
+                 </frameset>
+             </div>
+             <div class="col-lg-6"></div>
+         </div><br />
+        <div class="row">
+            <h3><a href="@Url.Action("home", "First")">Back To Home</a></h3></ <br />
+        </div>
+    </div>
+</body>
+</html>
